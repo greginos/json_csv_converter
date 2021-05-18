@@ -5,7 +5,7 @@ require_relative '../../lib/models/user'
 describe CSVGenerator do
   subject(:generate) { described_class.new.call(users: users) }
 
-  let(:expected_csv) { 'fixtures/response.csv' }
+  let(:expected_csv) { 'spec/fixtures/response.csv' }
 
   context 'when there are no users' do
     let(:users) { [] }

@@ -3,7 +3,7 @@ require_relative '../../lib/converter/json_importer'
 
 describe JSONImporter do
   subject(:import_json) { described_class.new.call(file: file) }
-  let(:file) { File.read('fixtures/fixture.json') }
+  let(:file) { File.read('spec/fixtures/fixture.json') }
   let(:user_builder) { instance_double(Builder::UserBuilder) }
 
   before(:each) do

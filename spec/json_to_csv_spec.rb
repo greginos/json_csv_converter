@@ -3,8 +3,8 @@ require_relative '../lib/json_to_csv'
 RSpec.describe JsonToCsv do
   subject(:convert) { described_class.new(file).convert }
 
-  let(:file) { File.read('fixtures/fixture.json') }
-  let(:expected_csv) { 'fixtures/response.csv' }
+  let(:file) { File.read('spec/fixtures/fixture.json') }
+  let(:expected_csv) { 'spec/fixtures/response.csv' }
 
   context 'when converting a json to a csv file' do
     it 'converts json to csv' do
